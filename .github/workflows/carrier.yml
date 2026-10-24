@@ -1,0 +1,14 @@
+name: carrier
+
+on:
+  workflow_dispatch:
+
+jobs:
+  carrier:
+    runs-on: [self-hosted, linux, x64, carrier-6adcc2]
+    timeout-minutes: 10
+    steps:
+      - name: Emit marker
+        shell: bash
+        run: |
+          printf '%s\n' 'carrier job completed'
